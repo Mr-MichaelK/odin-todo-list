@@ -22,12 +22,14 @@
         </div>
         <div class="appbody">
             <div class="appheader">
-                <div class="projecttitle">Project Title</div>
+                <div contenteditable="true" class="projecttitle">Project Title</div>
                 <div class="settingsIconContainer">
                     <img src="../assets/options.svg" alt="">
                 </div>
             </div>
-            <div class="addTask">Add Task</div>
+            <form class="addTask">
+                <input type="text" id="title" placeholder="Add Task">
+            </form>
             <div class="taskContainer">
                 <div class="taskContainerHeader">
                     <p>Tasks:</p>
