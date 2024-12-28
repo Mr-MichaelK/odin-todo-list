@@ -58,6 +58,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 
 .appbody {
@@ -78,20 +79,23 @@ main {
     padding: 0 20px; 
     height: 60px; 
     width: 90%;
-  }
+}
   
-  .projecttitle {
+.projecttitle {
     margin: 0 auto; 
     text-align: center; 
     font-size: 2.2rem; 
     font-weight: bold;
-  }
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
   
-  .settingsIconContainer img {
+.settingsIconContainer img {
     width: 24px; 
     height: 24px; 
     cursor: pointer; 
-  }
+}
   
 /*now replaced with form*/
 .addTask {
@@ -152,4 +156,12 @@ hr {
     border-radius: 40px;
     text-align: center;
     color: black;
+}
+
+.orderby img {
+    cursor: pointer;
+}
+
+a {
+    color: blueviolet;
 }
