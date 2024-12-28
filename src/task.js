@@ -1,4 +1,6 @@
 export default class Task {
+    static id = 1;
+    #ID;
     constructor(title, description = "", dueDate = null, priority = null) {
         this.title       = title;
         this.description = description;
@@ -6,6 +8,7 @@ export default class Task {
             this.dueDate = new Date(dueDate);
         this.priority    = priority;
         this.completed   = false;
+        this.#ID = Task.id++;
     }
     markComplete() {
         this.completed = true;
