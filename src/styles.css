@@ -197,17 +197,64 @@ a {
     margin: 1rem 2rem;
 }
 
-.usernameModal button {
+dialog button {
     padding: 0.5rem 1rem;
     border-radius: 40px;
     font-size: 0.8rem;
     font-family: 'Hanuman';
-    color: white;
+    color: blueviolet;
     background-color: black;
     border: 2px solid grey;
     margin-bottom: 0;
+    width: 20%;
+    cursor: pointer;
 }
 
 dialog::backdrop {
     background-color: #474f93ce;
+}
+
+.appsettingsModal {
+    width: 30%;
+    border-radius: 10px;
+    color: rgb(114, 22, 200);
+    background-color: rgb(39, 39, 39);
+}
+
+.appsettingsModal div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0.5rem;
+}
+
+.appsettingsModal img {
+    width: 2rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.appsettingsModal input {
+    background-color: rgb(224, 224, 224);
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    width: 35%;
+    border: 2px solid black;
+    font-family: 'Hanuman';
+}
+
+.appsettingsModal input::placeholder {
+    color: #454545;
+    font-family: 'Hanuman';
+}
+
+.appsettingsModal .buttonContainer {
+    justify-content: center;
+    gap: 3rem;
+}
+
+.appsettingsModal button {
+
 }

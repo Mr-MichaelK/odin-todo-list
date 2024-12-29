@@ -10,7 +10,6 @@ Design and implement a TODO List web application that supports multiple project 
 4. Delete a todo.
 5. Manage application settings:
    - Delete local storage data.
-   - Toggle dark/light mode.
    - Change username.
    - Clear completed tasks.
 6. Save and manage tasks within projects:
