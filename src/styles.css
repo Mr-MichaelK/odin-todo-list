@@ -255,6 +255,34 @@ dialog::backdrop {
     gap: 3rem;
 }
 
-.appsettingsModal button {
+.orderingModal p {
+    font-size: 100%;
+    margin: 0;
+}
 
+.orderingModal img {
+    width: 1.1rem;
+    height: auto;
+}
+
+.orderingModal div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.orderingModal .imgContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+}
+
+.orderingModal {
+    border-radius: 20px;
+    padding: 0.2rem 0.4rem;
+    z-index: 10;
+    bottom: 42%;
+    left: 22%;
 }
