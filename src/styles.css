@@ -107,13 +107,27 @@ main {
     font-size: 1.5rem;
 }
 
-#title {
-    text-align: center;
+.title {
     border-radius: 40px;
-    font-size: 1.2rem;
-    border: 2px solid black;
-    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
     font-family: 'Hanuman';
+    color: #575757;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.title img {
+    width: 1.5rem;
+    height: auto;
+    margin-top: -5px;
+}
+
+.title p {
+    margin: 0;
 }
 
 .taskContainer {
