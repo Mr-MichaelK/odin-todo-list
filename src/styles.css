@@ -206,7 +206,6 @@ dialog button {
     background-color: black;
     border: 2px solid grey;
     margin-bottom: 0;
-    width: 20%;
     cursor: pointer;
 }
 
@@ -285,4 +284,34 @@ dialog::backdrop {
     z-index: 10;
     bottom: 42%;
     left: 22%;
+}
+
+.optionsModal {
+    border-radius: 20px;
+    top: 20%;
+    left: 57%;
+}
+
+.optionsModal img {
+    width: 2rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.closeContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.optionsModal hr {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-color: #3a0061;
+}
+
+.optionsModal div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
 }
