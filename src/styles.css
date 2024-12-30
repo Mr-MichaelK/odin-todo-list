@@ -351,14 +351,16 @@ dialog::backdrop {
 }
 
 .loadTemplate,
-.loadProject {
+.loadProject,
+.saveAsTemplate {
     width: 40%;
     z-index: 10;
     border-radius: 20px;
 }
 
 .loadTemplate img,
-.loadProject img {
+.loadProject img,
+.saveAsTemplate img {
     width: 1.75rem;
     height: auto;
     cursor: pointer;
@@ -380,4 +382,59 @@ dialog::backdrop {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+}
+
+.saveAsTemplate {
+    background-color: grey;
+}
+
+.saveAsTemplate .selectedTasks {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.saveAsTemplate .selectedTasks h2 {
+    margin-top: 0;
+}
+
+.saveAsTemplate div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.saveAsTemplate .selectedTasks div {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.saveAsTemplate .closeContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saveAsTemplate input {
+    border-radius: 20px;
+    padding: 0.2rem 0.4rem;
+    border: 2px solid black;
+    font-family: 'Hanuman';
+    width: 35%;
+}
+
+.saveAsTemplate .buttonContainer {
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.saveAsTemplate button {
+    color: white;
+    min-width: fit-content;
+    max-width: 30%;
+    
 }

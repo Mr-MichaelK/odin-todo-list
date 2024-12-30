@@ -112,6 +112,41 @@
             </div>
         </div>
     </dialog>
+    <dialog class="saveAsTemplate" open>
+        <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
+        <div>
+            <p>Save Template Name as Project Name:</p>
+            <img src="../assets/settingsCheckbox.svg" alt="">
+        </div>
+        <!--Remove and dynamically generate when checkbox is empty-->
+        <div class="newName">
+            <label for="newTemplateName">New Template Name:</label>
+            <input type="text" id="newTemplateName" name="newTemplateName" maxlength="30" placeholder="Project">
+        </div>
+        <div>
+            <p>Save All Tasks in Template:</p>
+            <img src="../assets/settingsCheckbox.svg" alt="">
+        </div>
+        <div class="selectedTasks">
+            <h2>Select the tasks to include:</h2>
+            <div>
+                <img src="../assets/settingsCheckbox.svg" alt="">
+                <p>Task 1</p>
+            </div>
+            <div>
+                <img src="../assets/settingsCheckbox.svg" alt="">
+                <p>Task 2</p>
+            </div>
+            <div>
+                <img src="../assets/settingsCheckbox.svg" alt="">
+                <p>Task 3</p>
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <button>Cancel</button>
+            <button>Save</button>
+        </div>
+    </dialog>
     <main>
         <div class="header">
             <img src="../assets/Taskify.svg" alt="">
