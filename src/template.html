@@ -112,7 +112,7 @@
             </div>
         </div>
     </dialog>
-    <dialog class="saveAsTemplate" open>
+    <dialog class="saveAsTemplate">
         <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
         <div>
             <p>Save Template Name as Project Name:</p>
@@ -141,6 +141,17 @@
                 <img src="../assets/settingsCheckbox.svg" alt="">
                 <p>Task 3</p>
             </div>
+        </div>
+        <div class="buttonContainer">
+            <button>Cancel</button>
+            <button>Save</button>
+        </div>
+    </dialog>
+    <dialog class="renameProject">
+        <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
+        <div class="rename">
+            <label for="renameInput">New Project Name:</label>
+            <input type="text" id="renameInput" name="renameInput" placeholder="Project Name" maxlength="30">
         </div>
         <div class="buttonContainer">
             <button>Cancel</button>

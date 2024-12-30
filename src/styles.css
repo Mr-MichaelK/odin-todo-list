@@ -352,7 +352,8 @@ dialog::backdrop {
 
 .loadTemplate,
 .loadProject,
-.saveAsTemplate {
+.saveAsTemplate,
+.renameProject {
     width: 40%;
     z-index: 10;
     border-radius: 20px;
@@ -360,7 +361,8 @@ dialog::backdrop {
 
 .loadTemplate img,
 .loadProject img,
-.saveAsTemplate img {
+.saveAsTemplate img,
+.renameProject img {
     width: 1.75rem;
     height: auto;
     cursor: pointer;
@@ -384,7 +386,8 @@ dialog::backdrop {
     gap: 1rem;
 }
 
-.saveAsTemplate {
+.saveAsTemplate,
+.renameProject {
     background-color: grey;
 }
 
@@ -419,7 +422,8 @@ dialog::backdrop {
     justify-content: flex-end;
 }
 
-.saveAsTemplate input {
+.saveAsTemplate input,
+.renameProject input {
     border-radius: 20px;
     padding: 0.2rem 0.4rem;
     border: 2px solid black;
@@ -427,14 +431,30 @@ dialog::backdrop {
     width: 35%;
 }
 
-.saveAsTemplate .buttonContainer {
+.saveAsTemplate .buttonContainer,
+.renameProject .buttonContainer {
+    display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
 }
 
-.saveAsTemplate button {
+.saveAsTemplate button,
+.renameProject button {
     color: white;
     min-width: fit-content;
     max-width: 30%;
-    
+}
+
+.renameProject {
+    width: 30%;
+}
+
+.renameProject .rename {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rename input {
+    width: 40%;
 }
