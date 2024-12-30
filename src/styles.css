@@ -350,19 +350,22 @@ dialog::backdrop {
     justify-content: flex-end;
 }
 
-.loadTemplate {
+.loadTemplate,
+.loadProject {
     width: 40%;
     z-index: 10;
     border-radius: 20px;
 }
 
-.loadTemplate img {
+.loadTemplate img,
+.loadProject img {
     width: 1.75rem;
     height: auto;
     cursor: pointer;
 }
 
-.loadTemplate .template {
+.loadTemplate .template,
+.loadProject .project {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -371,7 +374,8 @@ dialog::backdrop {
     padding: 0.5rem 1rem;
 }
 
-.loadTemplate .template div {
+.loadTemplate .template div,
+.loadProject .project div {
     display: flex;
     justify-content: space-between;
     align-items: center;
