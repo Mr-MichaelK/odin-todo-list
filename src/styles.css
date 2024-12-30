@@ -376,7 +376,8 @@ dialog::backdrop {
 .loadTemplate img,
 .loadProject img,
 .saveAsTemplate img,
-.renameProject img {
+.renameProject img,
+.addTaskModal img {
     width: 1.75rem;
     height: auto;
     cursor: pointer;
@@ -471,4 +472,93 @@ dialog::backdrop {
 
 .rename input {
     width: 40%;
+}
+
+.addTaskModal {
+    border-radius: 20px;
+}
+
+.taskTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTaskModal div {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.addTaskModal p,
+.addTaskModal .closeContainer,
+.addTaskModal .buttonContainer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.priority div,
+.dueDate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+#descriptionInput {
+    resize: none;
+    height: 7rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-family: 'Hanuman';
+}
+
+.addTaskModal .buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#dueDateInput,
+#taskTitleInput {
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#taskTitleInput {
+    padding: 0.2rem 0.4rem;
+    font-family: 'Hanuman';
+}
+
+.low,
+.medium,
+.high {
+    color: black;
+    border-color: black;
+    width: 30%;
+}
+
+.low {
+    background-color: rgb(41, 253, 41);
+}
+
+.medium {
+    background-color: rgb(255, 173, 32);
+}
+
+.high {
+    background-color: rgb(255, 39, 39);
+}
+
+.priority div {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.addTaskModal .buttonContainer button {
+    background-color: #454545;
+    color: white;
 }

@@ -158,6 +158,33 @@
             <button>Save</button>
         </div>
     </dialog>
+    <dialog class="addTaskModal">
+        <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
+        <div class="taskTitle">
+            <label for="taskTitleInput">Task Title:</label>
+            <input type="text" id="taskTitleInput" name="taskTitleInput" placeholder="Do this" maxlength="100">
+        </div>
+        <div class="priority">
+            <p>Priority:</p>
+            <div>
+                <button class="low">Low</button>
+                <button class="medium">Medium</button>
+                <button class="high">High</button>
+            </div>
+        </div>
+        <div class="dueDate">
+            <label for="dueDateInput">Due Date:</label>
+            <input type="datetime-local" id="dueDateInput" name="dueDateInput">
+        </div>
+        <div class="description">
+            <label for="descriptionInput">Task Description:</label>
+            <textarea name="descriptionInput" id="descriptionInput"></textarea>
+        </div>
+        <div class="buttonContainer">
+            <button>Cancel</button>
+            <button>Add Task</button>
+        </div>
+    </dialog>
     <main>
         <div class="header">
             <img src="../assets/Taskify.svg" alt="">
