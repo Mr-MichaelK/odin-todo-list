@@ -13,10 +13,10 @@
             remember it!
         </div>
         <div class="buttoncontainer">
-            <button>
+            <button id="cancel">
                 Cancel
             </button>
-            <button>
+            <button id="confirm">
                 Confirm
             </button>
         </div>
@@ -28,19 +28,19 @@
         </div>
         <div>
             <div>Automatically save data to local storage:</div>
-            <img src="../assets/settingsCheckbox.svg" alt="">
+            <img src="../assets/settingsCheckbox.svg" alt="" id="settingsSaveDataIcon">
         </div>
         <div>
             <div>Delete local storage:</div>
-            <img src="../assets/settingsCheckboxempty.svg" alt="">
+            <img src="../assets/settingsCheckboxempty.svg" alt="" id="settingsDeleteDataIcon">
         </div>
         <div>
             <div>Automatically clear completed tasks:</div>
-            <img src="../assets/settingsCheckboxempty.svg" alt="">
+            <img src="../assets/settingsCheckboxempty.svg" alt="" id="settingsAutoClearIcon">
         </div>
         <div class="buttonContainer">
-            <button>Cancel</button>
-            <button>Confirm</button>
+            <button id="cancel">Cancel</button>
+            <button id="confirm">Confirm</button>
         </div>
     </dialog>
     <dialog class="newProject">
@@ -51,15 +51,15 @@
         </div>
         <div>
             <p>Save to Local Storage:</p>
-            <img src="../assets/settingsCheckbox.svg" alt="">
+            <img src="../assets/settingsCheckbox.svg" alt="" id="save">
         </div>
         <div style="margin-top: 1rem;">
-            <button>Cancel</button>
-            <button>Confirm</button>
+            <button id="cancel">Cancel</button>
+            <button id="confirm">Confirm</button>
         </div>
     </dialog>
     <dialog class="loadTemplate">
-        <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
+        <div class="closeContainer"><img src="../assets/close.svg" alt="" id="close"></div>
         <h1>Templates:</h1>
         <div class="templateContainer">
             <div class="template">
@@ -116,7 +116,7 @@
         <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
         <div>
             <p>Save Template Name as Project Name:</p>
-            <img src="../assets/settingsCheckbox.svg" alt="">
+            <img src="../assets/settingsCheckbox.svg" alt="" id="saveName">
         </div>
         <!--Remove and dynamically generate when checkbox is empty-->
         <div class="newName">
@@ -125,7 +125,7 @@
         </div>
         <div>
             <p>Save All Tasks in Template:</p>
-            <img src="../assets/settingsCheckbox.svg" alt="">
+            <img src="../assets/settingsCheckbox.svg" alt="" id="saveAll">
         </div>
         <div class="selectedTasks">
             <h2>Select the tasks to include:</h2>
@@ -143,8 +143,8 @@
             </div>
         </div>
         <div class="buttonContainer">
-            <button>Cancel</button>
-            <button>Save</button>
+            <button id="cancel">Cancel</button>
+            <button id="save">Save</button>
         </div>
     </dialog>
     <dialog class="renameProject">
@@ -154,8 +154,8 @@
             <input type="text" id="renameInput" name="renameInput" placeholder="Project Name" maxlength="30">
         </div>
         <div class="buttonContainer">
-            <button>Cancel</button>
-            <button>Save</button>
+            <button id="cancel">Cancel</button>
+            <button id="save">Save</button>
         </div>
     </dialog>
     <dialog class="addTaskModal">
@@ -181,8 +181,8 @@
             <textarea name="descriptionInput" id="descriptionInput"></textarea>
         </div>
         <div class="buttonContainer">
-            <button>Cancel</button>
-            <button>Add Task</button>
+            <button id="cancel">Cancel</button>
+            <button id="add">Add Task</button>
         </div>
     </dialog>
     <main>
@@ -207,19 +207,19 @@
                 </div>
                 <dialog class="optionsModal">
                     <div class="closeContainer"><img src="../assets/close.svg" alt=""></div>
-                    <div>New Project</div>
+                    <div id="newProjectButton">New Project</div>
                     <hr>
-                    <div>Load Template</div>
-                    <div>Load Project</div>
+                    <div id="loadTemplateButton">Load Template</div>
+                    <div id="loadProjectButton">Load Project</div>
                     <hr>
-                    <div>Save Project as Template</div>
+                    <div id="saveTemplateButton">Save Project as Template</div>
                     <hr>
-                    <div>Rename Project</div>
+                    <div id="renameProjectButton">Rename Project</div>
                     <hr>
-                    <div>Clear Completed Tasks</div>
-                    <div>Clear All Tasks</div>
+                    <div id="clearCompletedTasksButton">Clear Completed Tasks</div>
+                    <div id="clearAllTasksButton">Clear All Tasks</div>
                     <hr>
-                    <div style="color: red; margin-top: 1.2rem;">Delete Project</div>
+                    <div style="color: red; margin-top: 1.2rem;" id="deleteProjectButton">Delete Project</div>
                 </dialog>
             </div>
             <div class="addTask">
@@ -235,18 +235,18 @@
                         <img src="../assets/sort.svg" alt="">
                         <dialog class="orderingModal">
                             <p style="margin-bottom: 0.5rem;">Sort By:</p>
-                            <div>
+                            <div id="priority">
                                 <p>Priority</p>
                                 <div class="imgContainer">
-                                    <img src="../assets/up.svg" alt="">
-                                    <img src="../assets/down.svg" alt="">
+                                    <img src="../assets/up.svg" alt="" id="inc">
+                                    <img src="../assets/down.svg" alt="" id="dec">
                                 </div>
                             </div>
-                            <div>
+                            <div id="dueDate">
                                 <p>Due Date</p>
                                 <div class="imgContainer">
-                                    <img src="../assets/up.svg" alt="">
-                                    <img src="../assets/down.svg" alt="">
+                                    <img src="../assets/up.svg" alt="" id="inc">
+                                    <img src="../assets/down.svg" alt="" id="dec">
                                 </div>
                             </div>
                         </dialog>
