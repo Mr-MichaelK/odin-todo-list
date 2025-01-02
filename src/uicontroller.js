@@ -76,4 +76,12 @@ export default class UIController {
     static addProject(project) {
 
     }
+
+    static renderTemplates() {
+        // for each template saved in local storage, create a div and add it to loadTemplateContainer
+    }
+
+    static clearRenderedTemplates() {
+        // for each rendered template, remove from DOM
+    }
 }

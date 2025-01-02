@@ -147,9 +147,50 @@ export default class AppController {
         this.createNewProject();
     }
 
+    // Load Template Methods 
+
+    openLoadTemplateModal() {
+        elements.openLoadTemplateButton.addEventListener("click", () => {
+            UIController.openModal(elements.loadTemplateModal);
+            // render templates with UIController
+            UIController.renderTemplates();
+        });
+    }
+
+    closeLoadTemplateModal() {
+        elements.loadTemplateX.addEventListener("click", () => {
+            // clear rendered templates with UIController
+            UIController.clearRenderedTemplates();
+            UIController.closeDialog(elements.loadTemplateModal);
+        })
+    }
+
+    loadTemplateEventListeners() {
+        this.openLoadTemplateModal();
+        this.closeLoadTemplateModal();
+    }
+
+    // Rename Modal Methods
+
+    /*changeProjectName() {
+        elements..addEventListener("click", () => {
+            // get the content with UIController
+
+            // clear the content with UIController
+
+            // close the modal
+
+            // update project name in Project and localStorage
+
+            // update project name on UI with UIController
+
+        })
+    }*/
+
     init() {
         this.addTaskEventListeners();
         this.optionEventListeners();
         this.newProjectEventListeners();
+        this.loadTemplateEventListeners();
     }
 }
