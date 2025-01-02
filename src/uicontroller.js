@@ -92,4 +92,32 @@ export default class UIController {
     static clearRenderedProjects() {
         // for each rendered project, remove from DOM
     }
+
+    static toggleNewNameDiv() {
+        this.toggleCheckbox(elements.saveTemplateNameAsPName);
+        if (this.getCheckboxValue(elements.saveTemplateNameAsPName)) {
+            elements.saveTemplateNewNameDiv.innerHTML = '';
+        }
+        else {
+            elements.saveTemplateNewNameDiv.innerHTML = '<label for="newTemplateName">New Template Name:</label><input type="text" id="newTemplateName" name="newTemplateName" maxlength="30" placeholder="Project">';
+        }
+    }
+
+    static toggleTaskSelection() {
+        this.toggleCheckbox(elements.saveTemplateSaveAll);
+        if (this.getCheckboxValue(elements.saveTemplateSaveAll)) {
+            elements.saveTemplateSelectedTasksDiv.innerHTML = '';
+        }
+        else {
+            elements.saveTemplateSelectedTasksDiv.innerHTML = '<h2>Select the tasks to include:</h2>';
+            // for each task in current project, append them to the div
+        }
+    }
+
+    static clearSaveTemplateModal() {
+        this.resetCheckbox(elements.saveTemplateNameAsPName);
+        this.resetCheckbox(elements.saveTemplateSaveAll);
+        elements.saveTemplateSelectedTasksDiv.innerHTML = '';
+        elements.saveTemplateNewNameDiv.innerHTML = '';
+    }
 }

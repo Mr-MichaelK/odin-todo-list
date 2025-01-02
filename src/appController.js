@@ -170,6 +170,8 @@ export default class AppController {
         this.closeLoadTemplateModal();
     }
 
+    // Load Project Methods
+
     openLoadProjectModal() {
         elements.openLoadProjectButton.addEventListener("click", () => {
             UIController.openModal(elements.loadProjectModal);
@@ -189,6 +191,69 @@ export default class AppController {
     loadProjectEventListeners() {
         this.openLoadProjectModal();
         this.closeLoadProjectModal();
+    }
+
+    // Save As Template Methods
+
+    openSaveTemplateModal() {
+        elements.openSaveTemplateButton.addEventListener("click", () => UIController.openModal(elements.saveTemplateModal));
+    }
+
+    closeSaveTemplateModal() {
+        elements.saveTemplateModalX.addEventListener("click", () => {
+            UIController.closeDialog(elements.saveTemplateModal);
+            // clear content 
+            UIController.clearSaveTemplateModal();
+        });
+
+        elements.saveTemplateCancel.addEventListener("click", () => {
+            UIController.closeDialog(elements.saveTemplateModal);
+            // clear content 
+            UIController.clearSaveTemplateModal();
+        });
+    }
+
+    saveTemplateToggleNewName() {
+        elements.saveTemplateNameAsPName.addEventListener("click", () => UIController.toggleNewNameDiv());
+    }
+
+    saveTemplateToggleSelectTasks() {
+        elements.saveTemplateSaveAll.addEventListener("click", () => UIController.toggleTaskSelection());
+    }
+
+    saveTemplateSave() {
+        elements.saveTemplateSave.addEventListener("click", () => {
+            // retrieve modal content
+            let templateName;
+            if (UIController.getCheckboxValue(elements.saveTemplateNameAsPName)) {
+                // set templateName to current project name
+            }
+            else {
+                templateName = UIController.getInputValue(document.querySelector("#newTemplateName"));
+            }
+
+            if (!templateName) {
+                alert("Cannot save a template without a name!");
+                return;
+            }
+
+            // close the modal
+            UIController.closeDialog(elements.saveTemplateModal);
+    
+            // clear its content
+            UIController.clearSaveTemplateModal();
+
+            // save to local storage
+        
+        })
+    }
+
+    saveTemplateEventListeners() {
+        this.openSaveTemplateModal();
+        this.closeSaveTemplateModal();
+        this.saveTemplateToggleNewName();
+        this.saveTemplateToggleSelectTasks();
+        this.saveTemplateSave();
     }
 
     // Rename Modal Methods
@@ -214,5 +279,6 @@ export default class AppController {
         this.newProjectEventListeners();
         this.loadTemplateEventListeners();
         this.loadProjectEventListeners();
+        this.saveTemplateEventListeners();
     }
 }
