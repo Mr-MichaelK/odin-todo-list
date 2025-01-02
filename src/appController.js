@@ -91,9 +91,65 @@ export default class AppController {
         this.openOptionsDialog();
         this.closeOptionsDialog();
     }
+    
+    // New Project Modal Methods
+
+    openNewProjectModal() {
+        elements.openNewProjectModalButton.addEventListener("click", () => UIController.openModal(elements.newProjectModal));
+    }
+
+    closeNewProjectModal() {
+        elements.newProjectModalCancel.addEventListener("click", () => {
+            UIController.closeDialog(elements.newProjectModal);
+            // clear the content with UIController
+            UIController.clearInputValue(elements.newProjectNameInput);
+            UIController.resetCheckbox(elements.newProjectSaveIcon);
+        });
+
+        elements.newProjectModalX.addEventListener("click", () => {
+            elements.newProjectModal.close();
+            // clear the content with UIController
+            UIController.clearInputValue(elements.newProjectNameInput);
+            UIController.resetCheckbox(elements.newProjectSaveIcon);
+        });
+    }
+
+    toggleNewProjectSave() {
+        elements.newProjectSaveIcon.addEventListener("click", () => UIController.toggleCheckbox(elements.newProjectSaveIcon));
+    }
+
+    createNewProject() {
+        elements.newProjectModalConfirm.addEventListener("click", () => {
+            // get the content from UI with UIController
+            let projectName = UIController.getInputValue(elements.newProjectNameInput);
+            let saveStatus  = UIController.getCheckboxValue(elements.newProjectSaveIcon);
+
+            // close the modal
+            elements.newProjectModal.close();
+
+            // clear the content
+            UIController.clearInputValue(elements.newProjectNameInput);
+            UIController.resetCheckbox(elements.newProjectSaveIcon);
+
+            // create new project
+
+            // save project with local storage
+
+            // render new project
+
+        }); 
+    }
+
+    newProjectEventListeners() {
+        this.openNewProjectModal();
+        this.closeNewProjectModal();
+        this.toggleNewProjectSave();
+        this.createNewProject();
+    }
 
     init() {
         this.addTaskEventListeners();
         this.optionEventListeners();
+        this.newProjectEventListeners();
     }
 }

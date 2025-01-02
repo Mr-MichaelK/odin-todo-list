@@ -1,4 +1,6 @@
 import { elements } from './elements.js'
+import settingsCheck from '../assets/settingsCheckbox.svg'
+import settingsCheckEmpty from '../assets/settingsCheckboxempty.svg'
 
 export default class UIController {
     static openModal(modal) {
@@ -46,5 +48,32 @@ export default class UIController {
         taskDiv.id          = task.id + "";
         taskDiv.textContent = task.title;
         elements.taskContainer.appendChild(taskDiv);
+    }
+
+    static getCheckboxValue(icon) {
+        if (icon.src === settingsCheck) 
+            return true;
+        else 
+            return false;
+    }
+
+    static toggleCheckbox(icon) {
+        if (this.getCheckboxValue(icon)) 
+            icon.src = settingsCheckEmpty;
+        else 
+            icon.src = settingsCheck;
+    }
+
+    static resetCheckbox(icon, setVal = true) {
+        if (setVal) {
+            icon.src = settingsCheck;
+        }
+        else {
+            icon.src = settingsCheckEmpty;
+        }
+    }
+
+    static addProject(project) {
+
     }
 }
