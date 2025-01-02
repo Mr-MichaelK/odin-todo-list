@@ -562,3 +562,7 @@ dialog::backdrop {
     background-color: #454545;
     color: white;
 }
+
+.priority .inactive {
+    background-color: #5c5a50;
+}

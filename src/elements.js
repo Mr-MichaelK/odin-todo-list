@@ -4,14 +4,14 @@ export const elements = {
     addTaskModal         : document.querySelector(".addTaskModal"),
     addTaskModalX        : document.querySelector(".addTaskModal .closeContainer img"),
     addTaskInput         : document.querySelector("#taskTitleInput"),
-    addTaskPriorityLow   : document.querySelector("#low"),
-    addTaskPriorityMedium: document.querySelector("#medium"),
-    addTaskPriorityHigh  : document.querySelector("#high"),
+    addTaskPriorityLow   : document.querySelector(".low"),
+    addTaskPriorityMedium: document.querySelector(".medium"),
+    addTaskPriorityHigh  : document.querySelector(".high"),
     addTaskDueDateInput  : document.querySelector("#dueDateInput"),
     addTaskDescription   : document.querySelector(".description textarea"),
     addTaskCancel        : document.querySelector(".addTaskModal #cancel"),
     addTaskAdd           : document.querySelector(".addTaskModal #add"),
-    taskContainer        : document.querySelector(".taskContainer"),
+    taskContainer        : document.querySelector(".taskContainerBody"),
 
     // Option Elements
     openOptionButton: document.querySelector(".settingsIconContainer img"),

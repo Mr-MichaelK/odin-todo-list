@@ -1,0 +1,83 @@
+import Project from './project.js'
+import Task from './task.js'
+import { elements } from './elements.js'
+import UIController from './uicontroller.js'
+
+export default class AppController {
+    p = 3;
+    // Add Task Methods
+
+    openAddTaskModal() {
+        elements.openAddTaskButton.addEventListener("click", () => UIController.openModal(elements.addTaskModal));
+        // ensure min date is now
+    }
+
+    closeAddTaskModal() {
+        elements.addTaskModalX.addEventListener("click", () => {
+            UIController.closeModal(elements.addTaskModal);
+        });
+    
+        elements.addTaskCancel.addEventListener("click", () => {
+            UIController.closeModal(elements.addTaskModal);
+            // clear the content with UIController
+            UIController.clearInputValue(elements.addTaskInput);
+            // note to self: clear priority
+            UIController.clearPriority();
+            UIController.clearInputValue(elements.addTaskDueDateInput);
+            UIController.clearInputValue(elements.addTaskDescription);
+        });
+    }
+
+    priorityEventListeners() {
+        elements.addTaskPriorityLow.addEventListener("click", () => UIController.togglePriorityActivity(elements.addTaskPriorityLow));
+        elements.addTaskPriorityMedium.addEventListener("click", () => UIController.togglePriorityActivity(elements.addTaskPriorityMedium));
+        elements.addTaskPriorityHigh.addEventListener("click", () => UIController.togglePriorityActivity(elements.addTaskPriorityHigh));
+    }
+
+    addTask() {
+        elements.addTaskAdd.addEventListener("click", () => {
+            // retrieve content with UIController
+            let title       = UIController.getInputValue(elements.addTaskInput);
+            if (!title) {
+                alert("Cannot a task without a title.")
+                return;
+            }
+            // retrieve priority
+            let priority    = this.p;
+            let dueDate     = UIController.getInputValue(elements.addTaskDueDateInput);
+            let description = UIController.getInputValue(elements.addTaskDescription);
+
+            // send content to Task
+            let task = new Task(title, description, dueDate, priority);
+
+            // add Task to Project
+
+            // close the modal
+            UIController.closeModal(elements.addTaskModal);
+
+            // clear modal with UIController
+            UIController.clearInputValue(elements.addTaskInput);
+            // note to self: clear priority
+            UIController.clearPriority();
+            UIController.clearInputValue(elements.addTaskDueDateInput);
+            UIController.clearInputValue(elements.addTaskDescription);
+
+            // add the task to screen using UIController
+            UIController.addTask(task);
+            
+            // save to local storage
+
+        })
+    }
+
+    addTaskEventListeners() {
+        this.openAddTaskModal();
+        this.closeAddTaskModal();
+        this.priorityEventListeners();
+        this.addTask();
+    }
+
+    init() {
+        this.addTaskEventListeners();
+    }
+}
