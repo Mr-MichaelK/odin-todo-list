@@ -5,7 +5,11 @@ export default class UIController {
         modal.showModal();
     }
 
-    static closeModal(modal) {
+    static openDialog(dialog) {
+        dialog.show();
+    }
+
+    static closeDialog(modal) {
         modal.close();
     }
 

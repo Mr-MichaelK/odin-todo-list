@@ -14,11 +14,11 @@ export default class AppController {
 
     closeAddTaskModal() {
         elements.addTaskModalX.addEventListener("click", () => {
-            UIController.closeModal(elements.addTaskModal);
+            UIController.closeDialog(elements.addTaskModal);
         });
     
         elements.addTaskCancel.addEventListener("click", () => {
-            UIController.closeModal(elements.addTaskModal);
+            UIController.closeDialog(elements.addTaskModal);
             // clear the content with UIController
             UIController.clearInputValue(elements.addTaskInput);
             // note to self: clear priority
@@ -53,7 +53,7 @@ export default class AppController {
             // add Task to Project
 
             // close the modal
-            UIController.closeModal(elements.addTaskModal);
+            UIController.closeDialog(elements.addTaskModal);
 
             // clear modal with UIController
             UIController.clearInputValue(elements.addTaskInput);
@@ -77,7 +77,23 @@ export default class AppController {
         this.addTask();
     }
 
+    // Option Methods
+
+    openOptionsDialog() {
+        elements.openOptionButton.addEventListener("click", () => UIController.openDialog(elements.optionsDialog));
+    }
+
+    closeOptionsDialog() {
+        elements.optionsDialogX.addEventListener("click", () => UIController.closeDialog(elements.optionsDialog));
+    }
+
+    optionEventListeners() {
+        this.openOptionsDialog();
+        this.closeOptionsDialog();
+    }
+
     init() {
         this.addTaskEventListeners();
+        this.optionEventListeners();
     }
 }
