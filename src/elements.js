@@ -34,7 +34,7 @@ export const elements = {
     loadTemplateContainer : document.querySelector(".templateContainer"),
 
     // Load Project Elements
-    openLoadProjectButton: document.querySelector(".loadProjectButton"),
+    openLoadProjectButton: document.querySelector("#loadProjectButton"),
     loadProjectModal     : document.querySelector(".loadProject"),
     loadProjectX         : document.querySelector(".loadProject .closeContainer img"),
     loadProjectContainer : document.querySelector(".projectContainer"),

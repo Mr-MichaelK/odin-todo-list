@@ -170,6 +170,27 @@ export default class AppController {
         this.closeLoadTemplateModal();
     }
 
+    openLoadProjectModal() {
+        elements.openLoadProjectButton.addEventListener("click", () => {
+            UIController.openModal(elements.loadProjectModal);
+            // render projects with UIController
+            UIController.renderProjects();
+        });
+    }
+
+    closeLoadProjectModal() {
+        elements.loadProjectX.addEventListener("click", () => {
+            // clear rendered projects with UIController
+            UIController.clearRenderedProjects();
+            UIController.closeDialog(elements.loadProjectModal);
+        })
+    }
+
+    loadProjectEventListeners() {
+        this.openLoadProjectModal();
+        this.closeLoadProjectModal();
+    }
+
     // Rename Modal Methods
 
     /*changeProjectName() {
@@ -192,5 +213,6 @@ export default class AppController {
         this.optionEventListeners();
         this.newProjectEventListeners();
         this.loadTemplateEventListeners();
+        this.loadProjectEventListeners();
     }
 }
